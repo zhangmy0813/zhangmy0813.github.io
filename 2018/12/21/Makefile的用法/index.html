@@ -79,15 +79,18 @@
 
 
 
+<meta name="description" content="vpath %.a ../libvpath %.h ./inc PAPP_PATH=/home/liuyouting/shine/sappCFLAGS          =-g3 -Wall -fPICCFLAGS               += $(INCLUDES)CC              = g++CCC             = g++INCLUDES        = -I./">
 <meta name="keywords" content="Linux">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Makefile的用法">
 <meta property="og:url" content="http://yoursite.com/2018/12/21/Makefile的用法/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="vpath %.a ../libvpath %.h ./inc PAPP_PATH=/home/liuyouting/shine/sappCFLAGS          =-g3 -Wall -fPICCFLAGS               += $(INCLUDES)CC              = g++CCC             = g++INCLUDES        = -I./">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-12-21T07:29:14.199Z">
+<meta property="og:updated_time" content="2018-12-24T05:54:03.256Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Makefile的用法">
+<meta name="twitter:description" content="vpath %.a ../libvpath %.h ./inc PAPP_PATH=/home/liuyouting/shine/sappCFLAGS          =-g3 -Wall -fPICCFLAGS               += $(INCLUDES)CC              = g++CCC             = g++INCLUDES        = -I./">
 
 
 
@@ -343,8 +346,8 @@
               
               
                 <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/Linux的使用/" itemprop="url" rel="index">
-                    <span itemprop="name">Linux的使用</span>
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
                   </a>
                 </span>
 
@@ -380,7 +383,19 @@
       
 
       
-        
+        <p>vpath %.a ../lib<br>vpath %.h ./inc</p>
+<p>PAPP_PATH=/home/liuyouting/shine/sapp<br>CFLAGS          =-g3 -Wall -fPIC<br>CFLAGS               += $(INCLUDES)<br>CC              = g++<br>CCC             = g++<br>INCLUDES        = -I./inc/<br>INCLUDES        += -I/usr/include/MESA/<br>INCLUDES        += -I/include/<br>LIB = -L./lib/ -lMESA_handle_logger -lMESA_prof_load<br>LIB_FILE        = $(wildcard ../lib/<em>.a)<br>SOURCES         = $(wildcard </em>.c)<br>SOURCESCPP      = $(wildcard *.cpp)<br>OBJECTS         = $(SOURCES:.c=.o)<br>OBJECTSCPP      = $(SOURCESCPP:.cpp=.o)<br>TARGET = shine_mail_plug.so<br>.PHONY:clean all </p>
+<p>all:$(TARGET)</p>
+<p>$(TARGET):$(OBJECTSCPP) $(OBJECTS)     $(LIB_FILE)<br>    $(CCC) -shared -fPIC $(CFLAGS) $(OBJECTSCPP) $(OBJECTS) $(LIB)  -o $@</p>
+<pre><code>cp $(TARGET) ../bin/       
+</code></pre><p>.c.o:</p>
+<p>.cpp.o:<br>    $(CCC) $(CFLAGS) -c $&lt;</p>
+<p>-include $(DEPS)</p>
+<p>clean :<br>    rm -rf $(OBJECTS) $(DEPS) $(TARGET) </p>
+<p>PLUGIN_PATH=./plug/business<br>CONFLIST_NAME=conflist_business.inf<br>PLUGIN_DIR_NAME=shine_mail_plug<br>PLUGIN_INF_NAME=shine_mail_plug.inf</p>
+<p>TARGET_DIR=$(PAPP_PATH)/$(PLUGIN_PATH)/$(PLUGIN_DIR_NAME)/<br>INSERT_FILE=$(PAPP_PATH)/$(PLUGIN_PATH)/$(CONFLIST_NAME)<br>INSERT_CONTENT=$(PLUGIN_PATH)/$(PLUGIN_DIR_NAME)/$(PLUGIN_INF_NAME)<br>install:<br>    mkdir -p  $(TARGET_DIR)<br>    cp -r ../bin/<em>.inf $(TARGET_DIR)<br>    cp -r ../bin/</em>.so $(TARGET_DIR)<br>    @ret=<code>cat $(INSERT_FILE)|grep $(INSERT_CONTENT)|wc -l</code>;if [ $$ret -eq 0 ];then echo $(INSERT_CONTENT) &gt;&gt;$(INSERT_FILE);fi  </p>
+<p>CONF_NAME=shine_mail_plug.conf<br>CONF_DIR=$(PAPP_PATH)/$(PLUGIN_DIR_NAME)<br>conf:<br>    mkdir -p  $(CONF_DIR)<br>    cp -r ../bin/$(CONF_NAME) $(CONF_DIR)   </p>
+
       
     </div>
     
@@ -419,6 +434,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/12/24/gdb调试中遇到undefined-reference-to-问题的原因及解决方法/" rel="prev" title="gdb调试中遇到undefined reference to 问题的原因及解决方法">
+                gdb调试中遇到undefined reference to 问题的原因及解决方法 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -488,7 +507,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -499,7 +518,7 @@
               
               <div class="site-state-item site-state-categories">
                 
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">分类</span>
                 
               </div>
